@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayField AI — What Should We Play?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <p class="eyebrow">Hacktoberfest · Touch Grass</p>
+        <h1>PlayField AI</h1>
+        <p class="tagline">What should we play?</p>
+        <p class="intro">
+          Upload a photo of a field, court, or open ground. An open AI model
+          runs in your browser and recommends a sport.
+        </p>
+      </header>
+
+      <section class="card" aria-labelledby="upload-heading">
+        <h2 id="upload-heading">1. Choose a photo</h2>
+        <label class="upload-button" for="photo-input">
+          Upload field photo
+        </label>
+        <input
+          id="photo-input"
+          type="file"
+          accept="image/*"
+          capture="environment"
+        />
+        <p class="hint">You can replace the photo anytime. JPG, PNG, AVIF, or camera.</p>
+
+        <div id="preview-box" class="preview-box empty">
+          <img id="preview-image" alt="Selected field preview" hidden />
+          <p id="preview-placeholder">No photo yet</p>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="analyze-heading">
+        <h2 id="analyze-heading">2. Analyze</h2>
+        <button id="analyze-button" type="button" disabled>
+          Analyze field
+        </button>
+        <p class="hint">
+          First click downloads the open model (CLIP). After that it is faster.
+        </p>
+      </section>
+
+      <section class="card result-card" aria-labelledby="result-heading">
+        <h2 id="result-heading">3. Result</h2>
+        <div id="result-box" class="result-box">
+          Waiting for a photo...
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

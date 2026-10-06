@@ -1,0 +1,9 @@
+{
+  "name": "playfield-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PlayField AI — upload a field photo and get a sport recommendation. Hacktoberfest Touch Grass.",
+  "scripts": {
+    "start": "npx --yes serve ."
+  }
+}
